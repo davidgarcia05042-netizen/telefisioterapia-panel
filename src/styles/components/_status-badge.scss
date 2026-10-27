@@ -1,0 +1,13 @@
+// Insignia de estado (P3, docs/DECISIONES_TECNICAS.md): verde terminado, ámbar en curso, rojo
+// error. La clase según el texto del backend sale de statusClass (lib/format.js).
+.status-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.85em;
+  border: 1px solid transparent;
+}
+.status-badge--ok { background: #e7f6ec; border-color: #2e9d5b; color: #1d5e37; }
+.status-badge--progress { background: #fff4e0; border-color: #e0a030; color: #7a5410; }
+.status-badge--error { background: #fdecec; border-color: #d64545; color: #7a1f1f; }
+.status-badge--neutral { background: #f0f0f0; border-color: #c8c8c8; color: #444; }

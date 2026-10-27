@@ -1,0 +1,33 @@
+%font-base {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bold-font {
+  @extend %font-base;
+  font-weight: 600;
+}
+
+.regular-font {
+  @extend %font-base;
+  font-weight: 400;
+}
+
+.light-font {
+  @extend %font-base;
+  font-weight: 300;
+}
+
+.bold-italic-font {
+  @extend .bold-font;
+  font-style: italic;
+}
+
+.regular-italic-font {
+  @extend .regular-font;
+  font-style: italic;
+}
+
+.light-italic-font {
+  @extend .light-font;
+  font-style: italic;
+}

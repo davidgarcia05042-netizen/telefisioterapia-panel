@@ -1,0 +1,64 @@
+{
+  "name": "telerehabilitation_admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^0.10.32",
+    "@vueform/multiselect": "^1.0.2",
+    "chart.js": "^3.9.1",
+    "core-js": "^3.6.5",
+    "mdue": "^0.1.2",
+    "simple-object-query": "^1.6.1",
+    "telerehabilitation_admin": "file:",
+    "three": "^0.184.0",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.29.7",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "^5.0.9",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^30.4.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0-0",
+    "jest": "^30.4.2",
+    "sass": "^1.28.0",
+    "sass-loader": "^7.1.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "no-unused-vars": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ]
+  }
+}

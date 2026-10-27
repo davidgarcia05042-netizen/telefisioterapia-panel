@@ -1,0 +1,51 @@
+@use '../modules/colors';
+@use '../modules/fonts';
+
+.btn {
+  @extend .light-font;
+  display: inline-block;
+  height: 100%;
+  border: 0;
+  margin-right: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 10px;
+  }
+}
+.btn-sm span {
+  font-size: 0.5em;
+}
+.btn-lg {
+  font-size: 20px;
+}
+.btn-dark {
+  background-color: colors.$dark;
+  color: colors.$light;
+}
+.btn-light {
+  background-color: colors.$light;
+  color: colors.$dark;
+}
+.btn-muted {
+  background-color: colors.$muted;
+  color: colors.$white;
+}
+.btn-primary {
+  background-color: colors.$primary;
+  color: colors.$light;
+}
+.btn-secondary {
+  background-color: colors.$secondary;
+  color: colors.$light;
+}
+.btn-danger {
+  background-color: colors.$danger;
+  color: colors.$light;
+}
+.btn-success {
+  background-color: colors.$success;
+  color: colors.$white;
+}

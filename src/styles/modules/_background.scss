@@ -1,0 +1,29 @@
+@use 'colors';
+
+.dark-bg {
+  background-color: colors.$dark;
+}
+
+.light-bg {
+  background-color: colors.$light;
+}
+
+.muted-bg {
+  background-color: colors.$muted;
+}
+
+.secondary-bg {
+  background-color: colors.$secondary;
+}
+
+.primary-bg {
+  background-color: colors.$primary;
+}
+
+.danger-bg {
+  background-color: colors.$danger;
+}
+
+.white-bg {
+  background-color: colors.$white;
+}

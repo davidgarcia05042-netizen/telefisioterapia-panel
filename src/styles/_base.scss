@@ -1,0 +1,47 @@
+/*
+ * G4 (docs/DECISIONES_TECNICAS.md): body no tenía tipografía y todo texto sin clase de fuente
+ * salía en Times New Roman. Los controles de formulario no heredan la fuente
+ * por defecto: se la pasa el body.
+ */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: $dark;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/*
+ * G6: dentro de contenedores flex (columna centrada) un <hr> sin ancho
+ * colapsaba en un punto gris. Ocupa todo el ancho y es una línea fina.
+ */
+hr {
+  align-self: stretch;
+  box-sizing: border-box;
+  width: 100%;
+  height: 0;
+  margin: 16px 0;
+  border: 0;
+  border-top: 1px solid #dde3ec;
+}
+
+/*
+ * G5 (docs/DECISIONES_TECNICAS.md): antes `*:focus { outline: none; }` quitaba el foco en todo
+ * el panel y no se podía usar con el teclado. Ahora el contorno se ve al
+ * navegar con el teclado (:focus-visible) y no al hacer clic con el mouse.
+ */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid $primary;
+  outline-offset: 2px;
+}
+
+/* Sobre fondo oscuro (barra superior y lateral) el azul casi no se distingue. */
+.dark-bg :focus-visible {
+  outline-color: #9dbcf2;
+}

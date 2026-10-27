@@ -1,0 +1,29 @@
+@use 'colors';
+
+.dark-text {
+  color: colors.$dark;
+}
+
+.light-text {
+  color: colors.$light;
+}
+
+.muted-text {
+  color: colors.$muted;
+}
+
+.secondary-text {
+  color: colors.$secondary;
+}
+
+.primary-text {
+  color: colors.$primary;
+}
+
+.danger-text {
+  color: colors.$danger;
+}
+
+.white-text {
+  color: colors.$white;
+}

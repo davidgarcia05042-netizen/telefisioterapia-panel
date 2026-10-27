@@ -1,0 +1,41 @@
+@use '../modules/colors';
+
+// Tablas en grilla escritas a mano (mediciones del servicio, dificultades):
+// la misma franja de encabezado y las mismas filas que la tabla común
+// (components/table.vue). Cada vista define sus columnas con
+// grid-template-columns; las celdas son <span> hijos directos y las del
+// encabezado llevan .data-table__head.
+// `div.data-table > span` gana a `.patients-table span` de view_routine.scss.
+div.data-table {
+  display: grid;
+  gap: 0;
+  align-items: stretch;
+  margin-bottom: 20px;
+
+  > span {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 8px 12px;
+    background: colors.$white;
+    border-bottom: 1px solid #e3e8f0;
+    overflow-wrap: anywhere;
+  }
+
+  > .data-table__head {
+    min-height: 0;
+    padding: 10px 12px;
+    background: colors.$dark;
+    color: colors.$light;
+    border-bottom: 0;
+    overflow-wrap: normal;
+  }
+
+  > .data-table__head:first-child {
+    border-top-left-radius: 10px;
+  }
+
+  > .data-table__head--last {
+    border-top-right-radius: 10px;
+  }
+}

@@ -1,0 +1,85 @@
+@use '../modules/colors';
+
+// Formularios (fase V, docs/DECISIONES_TECNICAS.md): un solo ancho de tarjeta, la fila de
+// acciones con "Cancelar" y la ayuda bajo un campo.
+
+// Más específico que el `.create-therapy` con scope de cada vista: antes cada
+// formulario tenía su ancho (angosto, ancho, 80 %).
+.form-wrapper > form.create-therapy {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 680px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+
+  .btn {
+    height: auto;
+    min-height: 38px;
+    margin-right: 0;
+    padding: 4px 16px;
+    font-size: 1.05rem;
+  }
+}
+
+// Más específico que los `.create-therapy button { align-self: flex-end }` y
+// `button { width: 30% }` con scope de las vistas: los botones de la fila
+// quedan centrados y a su medida.
+div.form-actions > a.btn,
+div.form-actions > button.btn {
+  box-sizing: border-box;
+  align-self: center;
+  width: auto;
+  height: 38px;
+  min-height: 0;
+  padding: 0 16px;
+}
+
+// T6: "Asignar rutina" e "Inscribir paciente" usan .form-container en vez de
+// la tarjeta .create-therapy: el mismo ancho, y sus select y la fecha con el
+// estilo de los demás campos (antes, el borde negro del navegador).
+// `div.form-wrapper > div.form-container` gana al `.form-container` con scope.
+div.form-wrapper > div.form-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 680px;
+}
+
+.form-container select,
+.form-container input[type="datetime-local"],
+.form-container input[type="date"] {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 32px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 10px;
+  background-color: colors.$light;
+  font: inherit;
+  color: colors.$dark;
+}
+
+.btn-cancel {
+  background: transparent;
+  color: colors.$secondary;
+  border: 1px solid #cdd6e4;
+  text-decoration: none;
+
+  &:hover {
+    border-color: colors.$primary;
+    color: colors.$primary;
+  }
+}
+
+.form-help {
+  margin: -4px 0 12px;
+  font-size: 0.85em;
+  color: colors.$secondary;
+}

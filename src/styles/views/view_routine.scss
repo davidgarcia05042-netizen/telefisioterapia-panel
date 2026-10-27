@@ -1,0 +1,95 @@
+.therapies {
+  height: calc(100vh - 50px);
+  width: 100%;
+  overflow-y: scroll;
+  padding: 10px;
+}
+.header {
+  margin-bottom: 20px;
+}
+.header__title {
+  margin: 0;
+}
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.create-therapy {
+  border: 1px solid $dark;
+  border-radius: 20px;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  button {
+    align-self: flex-end;
+  }
+}
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  * {
+    display: block;
+  }
+  label {
+    margin-bottom: 5px;
+  }
+  textarea {
+    resize: none;
+  }
+  input,
+  textarea,
+	select {
+    margin-bottom: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 0;
+    background-color: $light;
+  }
+  input.has-error,
+  textarea.has-error {
+    border: 1px solid $danger;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    @extend .regular-italic-font;
+  }
+  &.form-checkbox {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    input {
+      margin: 0;
+      margin-left: 10px;
+    }
+    label {
+      margin-bottom: 0;
+    }
+  }
+}
+.form-error {
+  margin-bottom: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  border-radius: 30px;
+  border: 0;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+.patients-table {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 20px;
+  span {
+    padding-left: 10px;
+  }
+}
+.diff-table {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin-bottom: 20px;
+}
+
